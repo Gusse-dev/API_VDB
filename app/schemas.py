@@ -1,11 +1,15 @@
 from pydantic import BaseModel
-from typing import List, Dict
+from typing import Dict, Optional
 
-class EmbeddingInput(BaseModel):
-    id: str
-    embedding: List[float]
-    metadata: Dict[str, str]
 
-class QueryInput(BaseModel):
-    embedding: List[float]
-    top_k: int = 5
+class Document(BaseModel):
+    id:str
+    content: str | None = None
+    metadata: Dict
+
+class Documents(BaseModel):
+    documents: list[Document] = []
+
+class Message(BaseModel):
+    message: str
+    id: str | None = None
