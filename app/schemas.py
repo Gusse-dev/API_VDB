@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import Dict, Optional
+from typing import Dict
 
 
 class Document(BaseModel):
@@ -13,3 +13,10 @@ class Documents(BaseModel):
 class Message(BaseModel):
     message: str
     id: str | None = None
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str
+
+class User(BaseModel):
+    username: str

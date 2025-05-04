@@ -47,6 +47,10 @@ docker run -d --name api_vdb -p 8000:8000 api_vdb
 docker stop api_vdb
 ```
 
+**Info**: Using the API inside the container for the first time might take a while, as the language model for the vector database needs to downloaded.  
+
 ## Documentation
 
-View the Swagger-Documentation by running the app and accessing http://127.0.0.1:8000/docs#
+View the Swagger-Documentation by running the app and accessing http://127.0.0.1:8000/docs#  
+It is also provides an interface to test the functionality of the API.  
+Authorization can be done by using the top right 'authorize' icon and entering a valid username and password.
